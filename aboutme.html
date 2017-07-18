@@ -52,7 +52,7 @@
      <h4>Light Show</h4>
      <img src = "lightshow.jpg" align="middle" style = "width:304px;height:228px;">
      <button>Display video</button>
-     <div class = 'hidden'>
+     <div class = "hidden">
       <video>
        <source src = "lightshow.mp4" type="video/mp4">
       </video>
@@ -90,5 +90,18 @@
      </ol>
      </p>
      </section>
+     <script>
+      var btn = document.querySelector('button')
+      btn.onclick = function() {
+        videoBox.setAttribute('class', 'showing');
+      }
+      videoBox.onclick = function() {
+        videoBox.setAttribute('class', 'hidden');
+      };
+
+      video.onclick = function() {
+        video.play();
+      };
+     </script>
     </body>
 </html>
